@@ -1,0 +1,4 @@
+- [ ] Phase 2: integrate Claude with validated structured outputs, prompt-injection boundaries, evidence-backed tools, and explicitly labeled deterministic offline mode (`verity/`).
+- [ ] Phase 3: implement trusted-directory simulated verification, Python policy enforcement, transparent risk scoring, human review, and persistent investigation audit logging (`verity/`, `app.py`).
+- [ ] Phase 4: create 40 varied scenarios and measure fraud intervention, legitimate false holds, and latency separately for live AI and offline mode (`tests/`, evaluation module).
+- [ ] Phase 5: complete business case with sourced costs and hypothetical ROI assumptions, ethics discussion, final write-up, and demo rehearsal (`docs/`).
