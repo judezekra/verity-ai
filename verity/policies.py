@@ -1,6 +1,6 @@
 """Single source of truth for fictional company policy configuration.
 
-Phase 1 displays these policies; enforcement arrives in Phase 3.
+Phase 2 checks requirements; approval collection and decisions arrive in Phase 3.
 Money is represented as integer cents to avoid floating-point rounding.
 """
 

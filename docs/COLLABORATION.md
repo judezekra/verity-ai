@@ -1,6 +1,6 @@
 # Team collaboration
 
-The shared repository is [judezekra/verity-ai](https://github.com/judezekra/verity-ai). Phase 1 is prepared on `codex/phase-1-foundation` for review before merging into `main`. The creation instructions below are retained for reference; skip them for this existing repository.
+The shared repository is [judezekra/verity-ai](https://github.com/judezekra/verity-ai). Phase 2 is on `codex/phase-2-investigation`, which includes Phase 1. Review it before merging into `main`. For a fresh clone before merging, switch to that branch to access the application. The creation instructions below are retained for reference; skip them for this existing repository.
 
 ## Create the private repository (Jude)
 
@@ -30,7 +30,7 @@ git clone https://github.com/YOUR-USERNAME/verity-ai.git
 cd verity-ai
 git switch main
 git pull --ff-only
-git switch -c krish/claude-investigation
+git switch -c krish/ai-investigation
 ```
 
 Use your own name and a concrete feature in the branch name. Before committing:
@@ -41,7 +41,7 @@ git status
 git add verity tests
 git diff --cached
 git commit -m "Describe the specific change"
-git push -u origin krish/claude-investigation
+git push -u origin krish/ai-investigation
 ```
 
 Stage the actual files you changed (including documentation when relevant). Open a pull request on GitHub with base `main`; describe behavior, tests, and known limits. Ask another member to review it. Resolve comments, rerun checks, and use **Squash and merge** after approval. Then switch to `main` and `git pull --ff-only` locally before starting another branch. Do not force-push shared branches.
@@ -55,7 +55,7 @@ If repository rules available on your GitHub plan support it, require a pull req
 | Member | Primary responsibility | Collaboration boundary |
 | --- | --- | --- |
 | Jude Zekra | Product scope, Streamlit interface, demo coordination | Own `app.py`; review integration changes |
-| Krish Desai | Claude adapter, extraction validation, agent tools | Keep API calls outside policy logic |
+| Krish Desai | AI provider adapter, extraction validation, agent tools | Keep API calls outside policy logic |
 | Pratham Komma | Database, policy rules, verification and audit | Agree on typed findings with Krish |
 | Charlie Mueller | Scenario evaluation, tests, business case and write-up | Review metrics and assumptions with the team |
 

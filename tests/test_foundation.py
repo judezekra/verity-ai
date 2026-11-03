@@ -61,11 +61,11 @@ def test_streamlit_workflow(db, monkeypatch):
     app = AppTest.from_file(str(Path(__file__).resolve().parents[1] / "app.py"), default_timeout=20).run()
     assert not app.exception
     assert [metric.value for metric in app.metric] == ["20", "15", "100"]
-    app.button[-1].click().run()
+    next(button for button in app.button if button.label == "Preview request").click().run()
     assert app.error
     app.button[0].click().run()
     assert app.text_area[0].value == SAMPLES["Routine vendor payment"]
-    app.button[-1].click().run()
+    next(button for button in app.button if button.label == "Preview request").click().run()
     assert app.code[0].value == SAMPLES["Routine vendor payment"]
     for page in ["Company records", "Transaction history", "Policies & roadmap", "Audit log"]:
         app.sidebar.radio[0].set_value(page).run()
